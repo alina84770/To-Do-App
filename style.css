@@ -1,0 +1,180 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background: linear-gradient(#ffd55c 50%, #5a95ff 50%);
+}
+
+div.container {
+    display: flex;
+    justify-content: center;
+
+}
+
+div.to-do {
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+    background-color: white;
+    border-radius: 30px;
+    padding: 30px;
+    margin-top: 40px;
+    box-shadow: 0 0 10px white;
+    cursor: pointer;
+
+}
+
+/* styling h1 and its image */
+h1 {
+    color: orangered;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 img {
+    height: 60px;
+    width: 60px;
+}
+
+/* styling Add section */
+div.add {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(244, 235, 235);
+    border-radius: 30px;
+}
+
+div.addSection {
+    display: flex;
+    justify-content: center;
+}
+
+/* styling input field */
+input[type="text"] {
+    padding: 15px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 22px;
+    font-weight: 600;
+    color: orangered;
+    cursor: pointer;
+    width: 75%;
+    max-width: 14rem;
+}
+
+/* styling placeholder of input feild */
+input[type="text"]::placeholder {
+    font-size: 20px;
+}
+
+/* Styling Add Button */
+div.add button.addBtn {
+    padding: 15px 35px 15px 35px;
+    border-radius: 230px;
+    border: none;
+    background-color: orangered;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+
+div.add button:hover {
+    background-color: #ee4609;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/*styling list Item (tasks in to do list) */
+ul li {
+    padding: 13px 20px 13px 50px;
+    background-color: orangered;
+    margin-top: 15px;
+    border-radius: 30px;
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    width: 90%;
+    position: relative;
+    right: 2rem;
+}
+
+/* adding uncheck image before li text */
+ul li::before {
+    content: "";
+    height: 28px;
+    width: 28px;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+
+}
+
+/* replacing uncheck image with checked image this class is added in li through js */
+ul li.checked::before {
+    background-image: url(images/checked.png);
+}
+
+/* styling delete button */
+ul li button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    float: right;
+}
+
+/* styling trash  icon */
+ul li button i {
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+
+}
+
+/* when task is completed this class added  in li through js */
+.complete {
+    text-decoration: line-through;
+}
+
+/* error message when user try to click add button without entering any task in input feild */
+p.errorMsg {
+    text-align: center;
+    color: orangered;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 8px;
+    display: none;
+    cursor: pointer;
+
+}
+
+/* count task styling */
+p {
+    text-align: center;
+    color: orangered;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 8px;
+    cursor: pointer;
+    line-height: 1.5rem;
+}
+
+p span {
+    background-color: orangered;
+    padding: 4px 8px;
+    border-radius: 10px;
+    color: white;
+}

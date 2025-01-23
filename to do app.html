@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do App</title>
+    <!--Font Awesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!--StyleSheet-->
+        <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="to-do">
+            <h1>To-Do List <img src="images/icon.png" alt="No image found"></h1>
+            <div class="addSection">
+                <div class="add">
+                    <input type="text" placeholder="Enter your text" class="input">
+                    <button class="addBtn">Add</button>
+                </div>
+            </div>
+            <p class="taskCount">You have <span>0</span> task(s) to complete.</p>
+            <ul class="list-container"></ul>
+            <p class="errorMsg">Input cannot be empty.</p>
+        </div>
+    </div>
+    <!--link javascript file-->
+    <script src="script.js"></script>
+</body>
+
+</html>
